@@ -109,18 +109,13 @@ public class TextView extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (aboutBox == null) {
-                    aboutBox = new JDialog(frame,
-                            "About TextView", false);
-                    JPanel aboutPanel = new JPanel(
-                            new BorderLayout());
-                    JLabel aboutLabel = new JLabel(
-                            "TextView by Naba Barkakati, January 1999");
+                    aboutBox = new JDialog(frame, "About TextView", false);
+                    JPanel aboutPanel = new JPanel(new BorderLayout());
+                    JLabel aboutLabel = new JLabel("<html>TextView by Naba Barkakati, January 1999.<br/>Ported to Maven by Ralf Eichinger, March 2015</html>");
                     aboutPanel.add(aboutLabel);
-                    aboutBox.getContentPane().add(aboutPanel,
-                            BorderLayout.CENTER);
+                    aboutBox.getContentPane().add(aboutPanel, BorderLayout.CENTER);
                     JPanel buttonPanel = new JPanel(true);
-                    aboutPanel.add(buttonPanel,
-                            BorderLayout.SOUTH);
+                    aboutPanel.add(buttonPanel, BorderLayout.SOUTH);
                     JButton okBtn = new JButton("OK");
                     buttonPanel.add(okBtn);
                     okBtn.addActionListener(new ActionListener() {
